@@ -1,0 +1,22 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <small class="text-muted"><a class="navbar-brand" href="<%= articles_path %>">Wikinimous</a></small>
+    <small class="text-muted"><a class="navbar-brand" href="<%= new_article_path %>">New article</a></small>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-8 col-sm-offset-2">
+      <h1>New article</h1>
+      <form id="new_article" role="form" action="/articles" accept-charset="UTF-8" method="post">
+        <label class="control-label required" for="article_title">Title</label>
+        <input class="form-control" type="text" name="article[title]" id="article_title">
+        <label class="control-label required" for="article_content">Content</label>
+        <input class="form-control" type="text" name="article[content]" id="article_content">
+        <input type="submit" name="commit" value="Create Article" class="btn btn-default" data-disable-with="Create Article">
+      </form>
+      <a href="/articles">Back</a>
+    </div>
+  </div>
+</div>

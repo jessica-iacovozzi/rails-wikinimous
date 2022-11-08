@@ -1,0 +1,13 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <small class="text-muted"><a class="navbar-brand" href="<%= articles_path %>">Wikinimous</a></small>
+    <small class="text-muted"><a class="navbar-brand" href="<%= new_article_path %>">New article</a></small>
+  </div>
+</nav>
+
+<div class="container col-7">
+  <% @articles.each do |article| %>
+    <h3><%= link_to article.title, article_path(article) %><br></h3>
+    <p><small class="text-muted"><%= article.content %></small></p>
+  <% end %>
+</div>
